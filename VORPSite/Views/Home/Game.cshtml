@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ 
+    ViewBag.Title = "Play VORP";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>@Html.Raw(ViewBag.Scene)</p>
+
+@using (Html.BeginForm())
+{
+    <p>What do you do?  @Html.TextBox("PlayerCommand") <br />
+    <input type="submit" value="Do it!" /></p>
+}
